@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header h1{
+    text-align: center;
+    margin: 20px;
+}
+
+.course-body{
+    width: 100%;
+    max-width: 865px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.course-body label{
+    display: block;
+    margin: 8px 0;
+    font-weight: 700;
+}
+
+.course-body input{
+    padding: 5px;
+    width: 100%;
+}
+
+div.subject-name{
+    width: 50%;
+    float: left;
+}
+
+div.subject-info{
+    width: 50%;
+    float: right;
+}
+
+div.obtained{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+div.total{
+    width: 50%;
+    float: right;
+    padding: 10px;
+}
+
+div.course-result{
+    margin: 5px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
