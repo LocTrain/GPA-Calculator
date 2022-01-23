@@ -6,19 +6,34 @@ let grade = (total_marks) => {
     let student_grade;
 
     if (total_marks >= 90) {
-        student_grade = 'A';
+        student_grade = 4.0;
+    }
+    else if (total_marks >= 85) {
+        student_grade = 3.7;
     }
     else if (total_marks >= 80) {
-        student_grade = 'B';
+        student_grade = 3.3;
+    }
+    else if (total_marks >= 75) {
+        student_grade = 3.0;
     }
     else if (total_marks >= 70) {
-        student_grade = 'C';
+        student_grade = 2.7;
+    }
+    else if (total_marks >= 65) {
+        student_grade = 2.3;
     }
     else if (total_marks >= 60) {
-        student_grade = 'D';
+        student_grade = 2.0;
     }
-    else if (total_marks < 60) {
-        student_grade = 'F';
+    else if (total_marks >= 55) {
+        student_grade = 1.7;
+    }
+    else if (total_marks >= 50) {
+        student_grade = 1.3;
+    }
+    else if (total_marks < 50) {
+        student_grade = 0.0;
     }
 
     if (total_marks > 100) {
@@ -26,7 +41,7 @@ let grade = (total_marks) => {
         student_grade = 'X';
     }
 
-    return student_grade;
+    return student_grade.toFixed(2);
 }
 
 let calculate = () => {
@@ -53,9 +68,9 @@ let calculate = () => {
 let show_result = () => {
     calculate();
 
-    document.getElementById("course-1-name").innerHTML = course_name;
-    document.getElementById("course-1-marks").innerHTML = total_marks.toFixed(2);
-    document.getElementById("course-1-grade").innerHTML = obtained_grade;
+    document.getElementById("course-1-name").innerHTML = course_name.toUpperCase();
+    document.getElementById("course-1-marks").innerHTML = total_marks.toFixed(2) + "%";
+    document.getElementById("course-1-grade").innerHTML = "GPA = " + obtained_grade;
 
     document.getElementsByClassName("course-result")[0].style.display = "flex";
 }
