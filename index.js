@@ -46,19 +46,39 @@ let grade = (total_marks) => {
 
 let calculate = () => {
     course_name = document.getElementById("course-1").value;
-    let aqom = document.getElementById("course-1-aqom").value;
-    let aqtm = document.getElementById("course-1-aqtm").value;
+    let qom = document.getElementById("course-1-qom").value;
+    let qtm = document.getElementById("course-1-qtm").value;
+    let aom = document.getElementById("course-1-aom").value;
+    let atm = document.getElementById("course-1-atm").value;
     let mtom = document.getElementById("course-1-mtom").value;
     let mttm = document.getElementById("course-1-mttm").value;
     let tom = document.getElementById("course-1-tom").value;
     let ttm = document.getElementById("course-1-ttm").value;
 
-    let aqm = ((aqom / aqtm) * 25);
+    let labAO = document.getElementById("course-1-labAO").value;
+    let labAT = document.getElementById("course-1-labAT").value;
+    let labMTO = document.getElementById("course-1-labMTO").value;
+    let labMTT = document.getElementById("course-1-labMTT").value; 
+    let labTO = document.getElementById("course-1-labTO").value; 
+    let labTT = document.getElementById("course-1-labTT").value; 
+
+    let aqm = (((qom/qtm)*15) + ((aom/atm)*10));
     let mtm = ((mtom / mttm) * 25);
     let tm = ((tom / ttm) * 50);
 
-    total_marks = aqm + mtm + tm;
-    obtained_grade = grade(total_marks);
+    let labAssignmentMarks = ((labAO/labAT) * 25);
+    let labMidTermMarks = ((labMTO/labMTT) * 25);
+    let labTerminalMarks = ((labTO/labTT) * 50);
+    let labTotalMarks = ((labAssignmentMarks+ labTerminalMarks + labMidTermMarks)*0.25);
+
+    if(document.getElementById("course-1-labAO").value != ""){
+        total_marks = (((aqm + mtm + tm)*0.75) + labTotalMarks);
+        obtained_grade = grade(total_marks);
+    }
+    else{
+        total_marks = aqm + mtm + tm;
+        obtained_grade = grade(total_marks);
+    }
 
     console.log(course_name);
     console.log("Total Obtained Marks = ", total_marks);
@@ -75,3 +95,15 @@ let show_result = () => {
     document.getElementsByClassName("course-result")[0].style.display = "flex";
 }
 
+let show_lab = () => {
+    document.getElementsByClassName("lab")[0].style.display = "block";
+    // const labDisplay = document.getElementsByClassName("lab")[0];
+    // console.log("hello\n" + labDisplay.style.display);
+    // if(labDisplay.style.display == "none"){
+    //     labDisplay.style.display = "block";
+    // }
+    // else if(labDisplay.style.display == "block"){
+    //     labDisplay.style.display = "none";
+    // }
+    
+}
