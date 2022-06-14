@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +6,9 @@
     overflow-x: hidden;
 }
 
-
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
 
 header h1{
     text-align: center;
@@ -65,6 +68,20 @@ div.course-result{
     margin-top: 5px;
 }
 
+#course-1-lab{
+   /* background-color: #fa6166;
+    color: white;*/
+}
+
 .lab{
     display: none;
+}
+
+#course-1-lab, #course-1-calculate{
+    font-weight: 600;
+}
+
+header h1 span{
+    font-size: 12px;
+    color: #0BCEAF;
 }
