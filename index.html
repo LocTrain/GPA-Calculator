@@ -27,17 +27,32 @@
 
                 <div class="subject-info">
                     <div class="aq marks">
-                        <div class="aqom obtained">
+                        <div class="qom obtained">
 
-                            <label for="" class="subject-aqom-label">Assignment & Quizzes Obtained Marks</label>
-                            <input type="text" class="subject-aqom-input course-1-aqom" id="course-1-aqom">
+                            <label for="" class="subject-aqom-label">Quizzes Obtained Marks</label>
+                            <input type="text" class="subject-aqom-input course-1-aqom" id="course-1-qom">
                         </div>
 
-                        <div class="aqtm total">
+                        <div class="qtm total">
 
-                            <label for="" class="subject-aqtm-label">Assignment & Quizzes Total Marks</label>
+                            <label for="" class="subject-aqtm-label">Quizzes Total Marks</label>
                             <input type="text" class="subject-aqtm-input course-1-aqtm" placeholder="25"
-                                id="course-1-aqtm">
+                                id="course-1-qtm">
+                        </div>
+                    </div>
+
+                    <div class="aq marks">
+                        <div class="aom obtained">
+
+                            <label for="" class="subject-aqom-label">Assignments Obtained Marks</label>
+                            <input type="text" class="subject-aqom-input course-1-aqom" id="course-1-aom">
+                        </div>
+
+                        <div class="atm total">
+
+                            <label for="" class="subject-aqtm-label">Assignments Total Marks</label>
+                            <input type="text" class="subject-aqtm-input course-1-aqtm" placeholder="25"
+                                id="course-1-atm">
                         </div>
                     </div>
 
@@ -53,6 +68,54 @@
                             <label for="" class="subject-mttm-label">Mid Terms Total Marks</label>
                             <input type="text" class="subject-mttm-input course-1-mttm" placeholder="25"
                                 id="course-1-mttm">
+                        </div>
+                    </div>
+
+                    <div class="lab">
+
+                        <div class=" mt marks">
+                            <div class=" mtom obtained">
+
+                                <label for="" class="subject-mtom-label">Lab Assignments Obtained Marks</label>
+                                <input type="text" class="subject-mtom-input course-1-mtom" id="course-1-labAO">
+                            </div>
+
+                            <div class=" mttm total">
+
+                                <label for="" class="subject-mttm-label">Lab Assignments Total Marks</label>
+                                <input type="text" class="subject-mttm-input course-1-mttm" placeholder="25"
+                                    id="course-1-labAT">
+                            </div>
+                        </div>
+
+                        <div class="mt marks">
+                            <div class="mtom obtained">
+
+                                <label for="" class="ubject-mtom-label">Lab Mid Terms Obtained Marks</label>
+                                <input type="text" class="subject-mtom-input course-1-mtom" id="course-1-labMTO">
+                            </div>
+
+                            <div class="mttm total">
+
+                                <label for="" class="subject-mttm-label">Lab Mid Terms Total Marks</label>
+                                <input type="text" class="subject-mttm-input course-1-mttm" placeholder="25"
+                                    id="course-1-labMTT">
+                            </div>
+                        </div>
+
+                        <div class="mt marks">
+                            <div class="mtom obtained">
+
+                                <label for="" class="subject-mtom-label">Lab Terminal Obtained Marks</label>
+                                <input type="text" class="subject-mtom-input course-1-mtom" id="course-1-labTO">
+                            </div>
+
+                            <div class="mttm total">
+
+                                <label for="" class="subject-mttm-label">Lab Terminal Total Marks</label>
+                                <input type="text" class="subject-mttm-input course-1-mttm" placeholder="25"
+                                    id="course-1-labTT">
+                            </div>
                         </div>
                     </div>
 
@@ -72,6 +135,7 @@
                     </div>
                 </div>
 
+                <input type="button" onclick="show_lab()" value="Enter Lab marks" id="course-1-lab">
                 <input type="button" onclick="show_result()" value="Calculate" id="course-1-calculate">
 
                 <div class="course-result">
