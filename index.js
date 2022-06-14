@@ -1,6 +1,7 @@
 var course_name;
 var total_marks;
 var obtained_grade;
+let flag = 0;
 
 let grade = (total_marks) => {
     let student_grade;
@@ -95,15 +96,16 @@ let show_result = () => {
     document.getElementsByClassName("course-result")[0].style.display = "flex";
 }
 
-let show_lab = () => {
-    document.getElementsByClassName("lab")[0].style.display = "block";
-    // const labDisplay = document.getElementsByClassName("lab")[0];
-    // console.log("hello\n" + labDisplay.style.display);
-    // if(labDisplay.style.display == "none"){
-    //     labDisplay.style.display = "block";
-    // }
-    // else if(labDisplay.style.display == "block"){
-    //     labDisplay.style.display = "none";
-    // }
-    
+let show_lab = () => {    
+    if(flag == 0){
+        document.getElementsByClassName("lab")[0].style.display = "block";
+        document.getElementById("course-1-lab").value = "Remove Lab Marks";
+        flag = 1;
+    }
+    else if(flag == 1){
+           document.getElementsByClassName("lab")[0].style.display = "none"; 
+           document.getElementById("course-1-labAO").value = "";
+           document.getElementById("course-1-lab").value = "Enter Lab Marks";
+           flag = 0;
+    } 
 }
