@@ -57,20 +57,20 @@ div.total{
 
 div.course-result{
     margin: 5px;
+    padding: 5px;
     font-size: 25px;
     display: flex;
     justify-content: space-between;
-    display: none;
+    /*display: none;*/
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #0BCEAF;
+    border: 2px solid black;
 }
 
 #course-1-calculate{
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     margin-top: 5px;
-}
-
-#course-1-lab{
-   /* background-color: #fa6166;
-    color: white;*/
 }
 
 .lab{
