@@ -61,7 +61,7 @@ div.course-result{
     font-size: 25px;
     display: flex;
     justify-content: space-between;
-    display: none;
+    /*display: none;*/
     margin-bottom: 20px;
     border-radius: 10px;
     background-color: #0BCEAF;
