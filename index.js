@@ -46,6 +46,7 @@ let grade = (total_marks) => {
     return student_grade.toFixed(2);
 }
 
+// function to calculate total marks
 let calculate = () => {
     course_name = document.getElementById("course-1").value;
     let qom = document.getElementById("course-1-qom").value;
