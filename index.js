@@ -3,6 +3,7 @@ var total_marks;
 var obtained_grade;
 let flag = 0;
 
+//Function to calculate grade
 let grade = (total_marks) => {
     let student_grade;
 
@@ -59,24 +60,24 @@ let calculate = () => {
     let labAO = document.getElementById("course-1-labAO").value;
     let labAT = document.getElementById("course-1-labAT").value;
     let labMTO = document.getElementById("course-1-labMTO").value;
-    let labMTT = document.getElementById("course-1-labMTT").value; 
-    let labTO = document.getElementById("course-1-labTO").value; 
-    let labTT = document.getElementById("course-1-labTT").value; 
+    let labMTT = document.getElementById("course-1-labMTT").value;
+    let labTO = document.getElementById("course-1-labTO").value;
+    let labTT = document.getElementById("course-1-labTT").value;
 
-    let aqm = (((qom/qtm)*15) + ((aom/atm)*10));
+    let aqm = (((qom / qtm) * 15) + ((aom / atm) * 10));
     let mtm = ((mtom / mttm) * 25);
     let tm = ((tom / ttm) * 50);
 
-    let labAssignmentMarks = ((labAO/labAT) * 25);
-    let labMidTermMarks = ((labMTO/labMTT) * 25);
-    let labTerminalMarks = ((labTO/labTT) * 50);
-    let labTotalMarks = ((labAssignmentMarks+ labTerminalMarks + labMidTermMarks)*0.25);
+    let labAssignmentMarks = ((labAO / labAT) * 25);
+    let labMidTermMarks = ((labMTO / labMTT) * 25);
+    let labTerminalMarks = ((labTO / labTT) * 50);
+    let labTotalMarks = ((labAssignmentMarks + labTerminalMarks + labMidTermMarks) * 0.25);
 
-    if(document.getElementById("course-1-labAO").value != ""){
-        total_marks = (((aqm + mtm + tm)*0.75) + labTotalMarks);
+    if (document.getElementById("course-1-labAO").value != "") {
+        total_marks = (((aqm + mtm + tm) * 0.75) + labTotalMarks);
         obtained_grade = grade(total_marks);
     }
-    else{
+    else {
         total_marks = aqm + mtm + tm;
         obtained_grade = grade(total_marks);
     }
@@ -96,16 +97,16 @@ let show_result = () => {
     document.getElementsByClassName("course-result")[0].style.display = "flex";
 }
 
-let show_lab = () => {    
-    if(flag == 0){
+let show_lab = () => {
+    if (flag == 0) {
         document.getElementsByClassName("lab")[0].style.display = "block";
         document.getElementById("course-1-lab").value = "Remove Lab Marks";
         flag = 1;
     }
-    else if(flag == 1){
-           document.getElementsByClassName("lab")[0].style.display = "none"; 
-           document.getElementById("course-1-labAO").value = "";
-           document.getElementById("course-1-lab").value = "Enter Lab Marks";
-           flag = 0;
-    } 
+    else if (flag == 1) {
+        document.getElementsByClassName("lab")[0].style.display = "none";
+        document.getElementById("course-1-labAO").value = "";
+        document.getElementById("course-1-lab").value = "Enter Lab Marks";
+        flag = 0;
+    }
 }
