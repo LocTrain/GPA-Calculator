@@ -3,7 +3,7 @@ var total_marks;
 var obtained_grade;
 let flag = 0;
 
-//Function to calculate grade
+
 let grade = (total_marks) => {
     let student_grade;
 
@@ -46,7 +46,7 @@ let grade = (total_marks) => {
     return student_grade.toFixed(2);
 }
 
-// function to calculate total marks
+
 let calculate = () => {
     course_name = document.getElementById("course-1").value;
     let qom = document.getElementById("course-1-qom").value;
