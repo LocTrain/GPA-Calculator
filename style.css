@@ -1,61 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
 }
 
-body{
+/* body tag  */
+body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-header h1{
+header h1 {
     text-align: center;
     margin: 20px;
 }
 
-.course-body{
+.course-body {
     width: 100%;
     max-width: 865px;
     text-align: center;
     margin: 0 auto;
 }
 
-.course-body label{
+.course-body label {
     display: block;
     margin: 8px 0;
     font-weight: 700;
 }
 
-.course-body input{
+.course-body input {
     padding: 5px;
     width: 100%;
 }
 
-div.subject-name{
+div.subject-name {
     width: 50%;
     float: left;
 }
 
-div.subject-info{
+div.subject-info {
     width: 50%;
     float: right;
 }
 
-div.obtained{
+div.obtained {
     width: 50%;
     float: left;
     padding: 10px;
 }
 
-div.total{
+div.total {
     width: 50%;
     float: right;
     padding: 10px;
 }
 
-div.course-result{
+div.course-result {
     margin: 5px;
     padding: 5px;
     font-size: 25px;
@@ -68,20 +70,21 @@ div.course-result{
     border: 2px solid black;
 }
 
-#course-1-calculate{
+#course-1-calculate {
     margin-bottom: 10px;
     margin-top: 5px;
 }
 
-.lab{
+.lab {
     display: none;
 }
 
-#course-1-lab, #course-1-calculate{
+#course-1-lab,
+#course-1-calculate {
     font-weight: 600;
 }
 
-header h1 span{
+header h1 span {
     font-size: 12px;
     color: #0BCEAF;
 }
